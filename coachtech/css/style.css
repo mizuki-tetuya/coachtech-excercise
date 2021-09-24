@@ -1,0 +1,16 @@
+.speech--bubble {
+  background-color: red;
+  padding: 10px 20px;
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+.speech--bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-top: 10px solid red;
+  border: 10px solid transparent;
+  margin-left: -10px;
+}
