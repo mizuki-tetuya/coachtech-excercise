@@ -11,6 +11,18 @@
   <script src="https://unpkg.com/dayjs@1.7.7/locale/ja.js"></script>
 </head>
 <body>
-  <script src="js/main.js"></script>
+  <input type="button" id="openBtn" value="開く" class="openBtn">
+  <div class="modal">
+    <div class="modal_content">
+      <div class="modal_content-inner">
+        <p>モーダル</p>
+        <input type="button" id="closeBtn" value="閉じる">
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js">
+    dayjs.locale('ja'); //日本語に変更
+     //ここから追記...
+  </script>
 </body>
 </html>

@@ -1,30 +1,14 @@
-function result(name, test) {
-  if (test >= 70 && test <= 100) {
-    return console.log(`${name}君良くできました`);
-  } else if (test >= 30 && test < 70) {
-    return console.log(`${name}君普通です`);
-  } else if (test >= 0 && test < 30) {
-    return console.log(`${name}君もう少し頑張りましょう`);
+const openBtn = document.getElementById('openBtn');
+const closeBtn = document.getElementById('closeBtn');
+const modal = document.getElementById('modal');
+openBtn.addEventListener('click', () => {
+  modal.style.display = 'block';
+})
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+})
+window.addEventListener('click', (e) => {
+  if (!e.target.closest('.modal__content-inner') && e.target.id !== "openBtn") {
+    modal.style.display = 'none';
   }
-}
-
-const items = [
-  {
-    name: "A",
-    test: 80,
-  },
-  {
-    name: "B",
-    test: 15,
-  },
-  {
-    name: "c",
-    test: 55,
-  },
-];
-
-result("A", 80);
-result("B", 15);
-result("C", 55);
-
-
+});
